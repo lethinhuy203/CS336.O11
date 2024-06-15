@@ -4,109 +4,112 @@
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
 }
+
+html, body {
+  font-family: Montserrat, var(--default-font-family);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+input,
+select,
+textarea,
 button {
   outline: 0;
 }
-.frame {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
+
+.main-container {
+  position: relative;
+  width: 95vw;
+  margin: 0 auto;
+  padding-top: 10vh;
+  background: #ffffff;
+  overflow: hidden;
 }
-.frame-1 {
+
+.nav {
+  position: fixed;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.logo {
   display: flex;
   align-items: center;
   cursor: pointer;
-  width: 250px;
+  width: 230px;
   height: 107px;
   cursor: pointer;
 }
-.leaf-doctor {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  width: 153px;
-  height: 79px;
-  top: 27px;
-  left: 104px;
+
+.converted-2 {
+  width: 100px;
+  height: 15vh;
+  background: url("../images/logo.png") no-repeat center;
+  background-size: contain; /* Hoặc cover tùy theo yêu cầu */
+  z-index: 1;
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
+}
+
+.leaf-doctor-3 {
+  width: 10vw;
   color: #4d822b;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 2rem;
+  font-size: 1.5vw;
   font-weight: 700;
-  line-height: 39.008px;
+  line-height: 1.8vw;
   text-align: left;
-  z-index: 5;
-  cursor: pointer;
-}
-.converted-2 {
-  position: absolute;
-  width: 127px;
-  height: 104px;
-  top: 10px;
-  left: 0;
-  background: url("../images/logo.png")
-    no-repeat center;
-  background-size: cover;
-  z-index: 1;
-  cursor: pointer;
+  z-index: 2;
 }
 .main-frame {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: 1552px;
-  margin: 13px 0 0 0;
+  width: 95vw;
+  /* height: 1552px; */
   z-index: 6;
   overflow: hidden;
 }
 .frame-4 {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: 679px;
-  margin: 2px 0 0 0;
-  z-index: 7;
-  overflow: hidden;
-}
-.frame-4 {
-  position: relative;
-  width: 1200px;
-  height: 679px;
+  width: 95vw;
+  height: 35vw;
   margin: 2px 0 0 0;
   z-index: 7;
   overflow: hidden;
 }
 .frame-5 {
   position: relative;
-  width: 757px;
-  height: 590px;
-  margin: 0 0 0 438px;
+  display: flex;
+  justify-content: center;
+  height:100%;
+  flex-direction: column;
+  margin:auto;
+  margin-left: 50vw;
   font-size: 0px;
   z-index: 10;
   overflow: hidden;
 }
 .leaf-detection {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   position: relative;
-  width: 609px;
-  height: 119px;
-  margin: 264px 0 0 98px;
   color: #ffffff;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 50px;
+  font-size: 3.5vw;
   font-weight: 400;
-  line-height: 60.95px;
+  line-height: 4.3vw;
   text-align: left;
   z-index: 13;
 }
 .button {
   position: relative;
-  width: 563px;
-  height: 85px;
-  margin: 36px 0 0 98px;
+  width: 40vw;
+  height: 20%;
+  margin-top: 1vw;
   cursor: pointer;
   font-size: 0px;
   border: none;
@@ -117,7 +120,7 @@ button {
   left: 0;
   background: #569230;
   z-index: 15;
-  border-radius: 50px;
+  border-radius: 5000px;
 }
 .button:hover {
   background: #3e6823; /* Thay đổi màu chữ khi trỏ chuột vào nút */
@@ -127,14 +130,13 @@ button {
   align-items: flex-start;
   justify-content: center;
   position: relative;
-  width: 510.628px;
-  height: 42.876px;
-  margin: 5px 0 0 27px;
+  width: 100%;
+  margin: auto;
   color: #ffffff;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 40px;
+  font-size: 3vw;
   font-weight: 400;
-  line-height: 42.876px;
+  line-height: 4.2px;
   text-align: center;
   white-space: nowrap;
   z-index: 16;
@@ -142,126 +144,103 @@ button {
 .button:hover .start-process {
   color: #c2c0c0; /* Màu chữ khi trỏ chuột vào text trong nút */
 }
-
 .do-an {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 59px;
-  top: 86px;
-  left: 96px;
   color: #ffffff;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 40px;
+  font-size: 4vw;
   font-weight: 400;
-  line-height: 48.76px;
+  line-height: 5.2vw;
   text-align: left;
   white-space: nowrap;
   z-index: 11;
 }
 .cs338 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  height: 138px;
-  top: 123px;
-  left: 98px;
   color: #ffffff;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 96px;
+  font-size: 7vw;
   font-weight: 700;
-  line-height: 117.024px;
+  line-height: 8.2vw;
   text-align: left;
   white-space: nowrap;
   z-index: 12;
 }
 .chu-nong-dan {
   position: absolute;
-  width: 1357px;
-  height: 783px;
+  width: 95vw;
+  height: 35vw;
   top: 0;
-  left: -157px;
-  background: url("../images/chunongdan.png")
-    no-repeat center;
+  background: url("../images/chunongdan.png") no-repeat center;
   background-size: cover;
   z-index: 8;
 }
 .rectangle-6 {
   position: absolute;
-  width: 1357px;
-  height: 783px;
+  width: 95vw;
+  height: 35vw;
   top: 0;
-  left: -157px;
-  background: url("../images/gradient.png")
-    no-repeat center;
+  background: url("../images/gradient.png") no-repeat center;
   background-size: cover;
   z-index: 9;
 }
 .frame-7 {
   position: relative;
-  width: 1200px;
-  height: 162px;
+  width: 100%;
+  height: 10vw;
   margin: 0 0 0 0;
   z-index: 17;
   overflow: hidden;
 }
 .read-more {
   position: relative;
-  width: 420px;
-  height: 57px;
-  margin: 52px 0 0 390px;
-  z-index: 18;
-  cursor: pointer;
-}
-.read-more-8 {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  position: absolute;
-  width: 53.81%;
+  flex-direction: row;
   height: 100%;
+  width: 100%;
+  margin: auto;
+  z-index: 18;
+}
+
+.read-more-8 {
   top: 0;
   left: 15.24%;
   color: #4d822b;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 40px;
+  font-size: 3vw;
   font-weight: 300;
-  line-height: 48.76px;
+  line-height: 4vw;
   text-align: center;
   white-space: nowrap;
   z-index: 19;
 }
-/* Đổi màu chữ khi di chuột qua "Read more" */
+
 .read-more-8:hover {
   color: #6bb43d; /* Màu mới khi di chuột, ví dụ: màu cam */
   cursor: pointer; /* Thay đổi con trỏ chuột thành dạng pointer khi hover */
 }
+
 .vector {
-  position: absolute;
-  width: 9.52%;
-  height: 28.07%;
-  top: 36.84%;
-  left: 75.48%;
-  background: url("../images/readmore.png")
-    no-repeat center;
+  width: 4vw;
+  height: 3vw;
+  background: url("../images/readmore.png") no-repeat center;
   background-size: 100% 100%;
+  padding: auto;
+  margin-left: 1vw;
   z-index: 20;
 }
 .frame-9 {
   position: relative;
-  width: 1012px;
-  height: 709px;
-  margin: 0 0 0 85px;
+  width: 95vw;
+  margin: 0 5vw;
+  padding-bottom: 4vw;
   z-index: 21;
   overflow: hidden;
 }
 .about {
   position: relative;
-  width: 494px;
-  height: 201px;
-  margin: 25px 0 0 0;
+  width: 100%;
+  margin: 25px 0 5vw 0;
   z-index: 22;
   overflow: visible auto;
 }
@@ -269,34 +248,27 @@ button {
   position: relative;
   width: 171px;
   height: 33px;
-  margin: 0 0 0 31px;
   background: #4d822b;
   z-index: 24;
 }
 .about-b {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
   position: relative;
-  width: 428px;
-  height: 168px;
-  margin: 0 0 0 -2px;
   color: #4d822b;
   font-family: Montserrat, var(--default-font-family);
-  font-size: 110px;
+  font-size: 7vw;
   font-weight: 800;
-  line-height: 134.09px;
+  line-height: 8vw;
   text-align: center;
   white-space: nowrap;
   z-index: 23;
 }
 .frame-c {
   position: relative;
-  width: 1012px;
-  height: 257px;
-  margin: 0 0 0 15px;
-  background: url("../images/vanban.png")
-    no-repeat center;
+  width: 85vw;
+  height: 22vw;
+  background: url("../images/vanban.png") no-repeat center;
   background-size: cover;
   z-index: 25;
 }
@@ -304,8 +276,8 @@ button {
 /* Định dạng drop zone */
 #dropZone {
   width: 100%; /* Chiều rộng 80% của container */
-  max-width: 1110px;
-  height: 400px;
+  max-width: 80vw;
+  height: 70vh;
   border: 2px solid #4d822b;
   text-align: center;
   line-height: 200px;
@@ -336,6 +308,8 @@ button {
 #submitBtn {
   display: none;
 }
+
+/* style.css */
 
 /* Định dạng container chứa hình ảnh và thông tin */
 .result-container {
@@ -386,3 +360,73 @@ button {
   margin-top: 10px;
 }
 
+.loader-container {
+  display:flex; 
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
+  display: none;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #4d822b;; /* Green */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  align-items: center;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Custom Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
